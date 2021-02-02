@@ -8,9 +8,9 @@ export default function Menu(props) {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-      if(sessionStorage.getItem("lang")==="english"){
+      if(sessionStorage.getItem("lang")==="french"){
         axios
-          .get(`${API_URL}/menus`)
+          .get(`${API_URL}/menu-frenches`)
           .then(res => {
             //console.log(res)
             setData(res.data)
@@ -21,7 +21,7 @@ export default function Menu(props) {
       }
       else{
         axios
-          .get(`${API_URL}/menu-frenches`)
+          .get(`${API_URL}/menus`)
           .then(res => {
             //console.log(res)
             setData(res.data)

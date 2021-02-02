@@ -6,9 +6,9 @@ export default function ServicesEven4(props) {
 
     const [data, setData] = useState([]);
     useEffect(() => {
-        if(sessionStorage.getItem("lang")==="english"){
+        if(sessionStorage.getItem("lang")==="french"){
             axios
-              .get(`${API_URL}/service-even-4-s`)
+              .get(`${API_URL}/service-even-4-frenches`)
               .then(res => {
                 //console.log(res)
                 setData(res.data)
@@ -19,7 +19,7 @@ export default function ServicesEven4(props) {
           }
           else{
             axios
-              .get(`${API_URL}/service-even-4-frenches`)
+              .get(`${API_URL}/service-even-4-s`)
               .then(res => {
                 //console.log(res)
                 setData(res.data)

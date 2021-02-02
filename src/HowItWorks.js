@@ -15,9 +15,9 @@ export default function HowItWorks(props) {
   const [dataOdd, setDataOdd] = useState([]);
 
     useEffect(() => {
-      if(sessionStorage.getItem("lang")==="english"){
+      if(sessionStorage.getItem("lang")==="french"){
           axios
-            .get(`${API_URL}/service-odd-3-s`)
+            .get(`${API_URL}/service-odd-3-frenches`)
             .then(res => {
               //console.log(res)
               setData(res.data)
@@ -28,7 +28,7 @@ export default function HowItWorks(props) {
         }
         else{
           axios
-            .get(`${API_URL}/service-odd-3-frenches`)
+            .get(`${API_URL}/service-odd-3-s`)
             .then(res => {
               //console.log(res)
               setData(res.data)
@@ -40,9 +40,9 @@ export default function HowItWorks(props) {
     },[sessionStorage.getItem("lang")])
   
     useEffect(() => {
-      if(sessionStorage.getItem("lang")==="english"){
+      if(sessionStorage.getItem("lang")==="french"){
           axios
-            .get(`${API_URL}/service-odd-5-s`)
+            .get(`${API_URL}/service-odd-5-frenches`)
             .then(res => {
               //console.log(res)
               setDataOdd(res.data)
@@ -53,7 +53,7 @@ export default function HowItWorks(props) {
         }
         else{
           axios
-            .get(`${API_URL}/service-odd-5-frenches`)
+            .get(`${API_URL}/service-odd-5-s`)
             .then(res => {
               //console.log(res)
               setDataOdd(res.data)

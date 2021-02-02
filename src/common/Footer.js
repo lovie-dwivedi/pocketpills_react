@@ -6,9 +6,9 @@ export default function Footer() {
 
     const [data, setData] = useState([]);
     useEffect(() => {
-        if(sessionStorage.getItem("lang")==="english"){
+        if(sessionStorage.getItem("lang")==="french"){
             axios
-              .get(`${API_URL}/footers`)
+              .get(`${API_URL}/footer-frenches`)
               .then(res => {
                 //console.log(res)
                 setData(res.data)
@@ -19,7 +19,7 @@ export default function Footer() {
           }
           else{
             axios
-              .get(`${API_URL}/footer-frenches`)
+              .get(`${API_URL}/footers`)
               .then(res => {
                 //console.log(res)
                 setData(res.data)

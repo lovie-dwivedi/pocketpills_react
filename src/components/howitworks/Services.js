@@ -6,9 +6,9 @@ export default function Services(props) {
 
     const [data, setData] = useState([]);
     useEffect(() => {
-        if(sessionStorage.getItem("lang")==="english"){
+        if(sessionStorage.getItem("lang")==="french"){
             axios
-              .get(`${API_URL}/serviceodds`)
+              .get(`${API_URL}/service-odd-frenches`)
               .then(res => {
                 //console.log(res)
                 setData(res.data)
@@ -19,7 +19,7 @@ export default function Services(props) {
           }
           else{
             axios
-              .get(`${API_URL}/service-odd-frenches`)
+              .get(`${API_URL}/serviceodds`)
               .then(res => {
                 //console.log(res)
                 setData(res.data)

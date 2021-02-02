@@ -8,8 +8,6 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 
-  sessionStorage.setItem("lang", "english")
-
   return (
     <>
       <BrowserRouter>

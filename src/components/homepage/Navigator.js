@@ -6,9 +6,9 @@ export default function Navigator() {
 
     const [data, setData] = useState([]);
     useEffect(() => {
-        if(sessionStorage.getItem("lang")==="english"){
+        if(sessionStorage.getItem("lang")==="french"){
             axios
-              .get(`${API_URL}/navigator-1-s`)
+              .get(`${API_URL}/navigator-1-frenches`)
               .then(res => {
                 //console.log(res)
                 setData(res.data)
@@ -19,7 +19,7 @@ export default function Navigator() {
           }
           else{
             axios
-              .get(`${API_URL}/navigator-1-frenches`)
+              .get(`${API_URL}/navigator-1-s`)
               .then(res => {
                 //console.log(res)
                 setData(res.data)

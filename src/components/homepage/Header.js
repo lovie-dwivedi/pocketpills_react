@@ -9,9 +9,9 @@ export default function Header() {
     const [data, setData] = useState([]);
     const [width, setwidth] = useState("0px");
     useEffect(() => {
-        if(sessionStorage.getItem("lang")==="english"){
+        if(sessionStorage.getItem("lang")==="french"){
             axios
-              .get(`${API_URL}/f-headers`)
+              .get(`${API_URL}/f-header-frenches`)
               .then(res => {
                 //console.log(res)
                 setData(res.data)
@@ -22,7 +22,7 @@ export default function Header() {
           }
           else{
             axios
-              .get(`${API_URL}/f-header-frenches`)
+              .get(`${API_URL}/f-headers`)
               .then(res => {
                 //console.log(res)
                 setData(res.data)
